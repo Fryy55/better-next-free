@@ -1,0 +1,25 @@
+{
+	"geode": "4.6.3",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "fryy_55.item-edit-fix",
+	"name": "Item Edit Fix",
+	"version": "v1.0.0",
+	"developer": "Fryy_55",
+	"description": "Fixes one of the most random RobTop bugs",
+	"tags": [
+		"offline",
+		"bugfix"
+	],
+	"links": {
+		"source": "https://github.com/Fryy55/item-edit-fix",
+		"community": "https://discord.com/invite/4vqtjfdhTk"
+	},
+	"dependencies": {
+		
+	}
+}

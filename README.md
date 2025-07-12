@@ -1,10 +1,10 @@
-# Item Edit Fix
+# Better "Next Free"
 This is where she makes a mod.
 
 <img src="logo.png" width="150" alt="logo!!!" />
 
 # Installation
-1) Download the latest version from [releases](https://github.com/Fryy55/item-edit-fix/releases)
+1) Download the latest version from [releases](https://github.com/Fryy55/better-next-free/releases)
 2) Install manually via Geode
 
 # Feedback

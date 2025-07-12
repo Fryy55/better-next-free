@@ -6,20 +6,18 @@
 		"mac": "2.2074",
 		"ios": "2.2074"
 	},
-	"id": "fryy_55.item-edit-fix",
-	"name": "Item Edit Fix",
-	"version": "v1.0.0",
+	"id": "fryy_55.better-next-free",
+	"name": "Better \"Next Free\"",
+	"version": "v1.0.0-beta.1",
 	"developer": "Fryy_55",
-	"description": "Fixes one of the most random RobTop bugs",
+	"description": "Makes the \"Next Free\" button behave correctly",
 	"tags": [
 		"offline",
-		"bugfix"
+		"bugfix",
+		"enhancement"
 	],
 	"links": {
-		"source": "https://github.com/Fryy55/item-edit-fix",
+		"source": "https://github.com/Fryy55/better-next-free",
 		"community": "https://discord.com/invite/4vqtjfdhTk"
-	},
-	"dependencies": {
-		
 	}
 }

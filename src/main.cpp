@@ -18,7 +18,7 @@ class $modify(LevelEditorLayer) {
 				for (auto group : *object->m_groups)
 					MARK(group);
 
-			if (object->isTrigger()) {
+			if (object->m_isTrigger) {
 				auto trigger = static_cast<EffectGameObject*>(object);
 
 				MARK(trigger->m_targetGroupID);

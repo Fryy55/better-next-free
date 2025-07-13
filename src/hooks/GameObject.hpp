@@ -8,5 +8,6 @@ class $modify(HGameObject, GameObject) {
 		bool m_fix = false;
 	};
 
-	$override void customSetup();
+	$override
+	void customSetup();
 };

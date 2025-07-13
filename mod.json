@@ -8,7 +8,7 @@
 	},
 	"id": "fryy_55.better-next-free",
 	"name": "Better \"Next Free\"",
-	"version": "v1.0.0-beta.1",
+	"version": "v1.0.0",
 	"developer": "Fryy_55",
 	"description": "Makes the \"Next Free\" button behave correctly",
 	"tags": [
@@ -19,5 +19,11 @@
 	"links": {
 		"source": "https://github.com/Fryy55/better-next-free",
 		"community": "https://discord.com/invite/4vqtjfdhTk"
+	},
+	"dependencies": {
+		"geode.node-ids": {
+			"version": ">=v1.20.1",
+			"importance": "required"
+		}
 	}
 }

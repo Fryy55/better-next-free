@@ -1,7 +1,7 @@
 # Better "Next Free"
 ###### requested by [CarlIsBored](user:10748478)
 
-This mod completely reimplements the "Next Free" button's... implementation? Now **all** your groups will be properly calculated!
+This mod completely reimplements the "Next Free" button's... implementation? Now **all** your groups will be properly calculated - normally the editor counts stuff like triggers that target <cc>Control IDs</c> or the target item of <cl>Item Edit Triggers</c> towards the Next Free group, and doesn't count stuff like <cp>Move Trigger</c>'s center group. This mod fixes all these problems, while keeping <cg>performance</c> the same (or, maybe, makes it even better!)
 
 ### **<cf>Fixed objects:</c>**
 - Move Trigger

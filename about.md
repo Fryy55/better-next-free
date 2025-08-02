@@ -6,23 +6,17 @@ This mod completely reimplements the "Next Free" button's... implementation? Now
 ### **<cf>Fixed objects:</c>**
 - Move Trigger
 - Stop Trigger
-- Pulse Trigger
 - Rotate Trigger
 - Keyframe Animation Trigger
 - Edit Advanced Follow Trigger
 - Re-Target Advanced Follow Trigger
-- Keyframe
 - Edit Area Triggers
 - Area Stop Trigger
 - Item Edit Trigger
 - Advanced Random Trigger
 - Sequence Trigger
 - Gradient Trigger
-- Teleport Orb
-- Toggle Orb
-- Teleport Portal
 - Checkpoint
-- Toggle Block
 - ALL collectibles (Keys, Hearts, Clocks, Pixel objects...)
 
 ## Support and feedback

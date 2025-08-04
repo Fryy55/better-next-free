@@ -8,9 +8,9 @@
 	},
 	"id": "fryy_55.better-next-free",
 	"name": "Better \"Next Free\"",
-	"version": "v1.0.1",
+	"version": "v1.1.0",
 	"developer": "Fryy_55",
-	"description": "Makes the \"Next Free\" button behave correctly",
+	"description": "Improves \"Next Free\" buttons around the game",
 	"tags": [
 		"offline",
 		"bugfix",

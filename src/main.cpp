@@ -65,7 +65,7 @@ class $modify(SetGroupIDLayer) {
 		offset = 0u;
 
 		if (auto offsetInput = this->m_mainLayer->getChildByID("next-free-menu")->getChildByID("hjfod.betteredit/next-free-offset-input")) {
-			offset = numFromString<std::uint16_t>(offsetInput->getChildByType<TextInput>(0)->getString(), 10).unwrapOr(0u);
+			offset = numFromString<std::uint16_t>(offsetInput->getChildByType<TextInput>(0)->getString()).unwrapOr(0u);
 
 			m_groupIDValue = LevelEditorLayer::get()->getNextFreeGroupID(nullptr);
 			this->updateGroupIDLabel();

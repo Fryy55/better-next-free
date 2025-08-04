@@ -4,8 +4,8 @@ This is where she makes a mod.
 <img src="logo.png" width="150" alt="logo!!!" />
 
 # Installation
-Install in-game via Geode's index\
-**OR**
+- Install in-game via Geode's index
+  ### **OR**
 1) Download the latest version from [releases](https://github.com/Fryy55/better-next-free/releases)
 2) Install manually via Geode
 

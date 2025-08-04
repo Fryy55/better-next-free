@@ -1,16 +1,9 @@
 #include "LevelEditorLayer.hpp"
-
 #include "GameObject.hpp"
+#include "SetGroupIDLayer.hpp"
 
 using namespace geode::prelude;
 
-
-void HLevelEditorLayer::onModify(auto& self) {
-	if(!self.setHookPriorityPre("LevelEditorLayer::getNextFreeGroupID", Priority::Replace))
-		log::warn("Failed to set hook priority for LevelEditorLayer::getNextFreeGroupID");
-
-	return;
-}
 
 int HLevelEditorLayer::getNextFreeGroupID(CCArray*) {
 	std::array<bool, 10'000u> usedGroups{};
@@ -127,4 +120,19 @@ int HLevelEditorLayer::getNextFreeGroupID(CCArray*) {
 			return i;
 
 	return 0;
+}
+
+void HSetGroupIDLayer::onNextGroupID1(CCObject* sender) {
+	auto& offset = static_cast<HLevelEditorLayer*>(LevelEditorLayer::get())->m_fields->m_nextFreeOffset;
+	offset = 0u;
+
+	if (auto offsetInput = this->m_mainLayer->getChildByID("next-free-menu")->getChildByID("hjfod.betteredit/next-free-offset-input")) {
+		offset = numFromString<std::uint16_t>(offsetInput->getChildByType<TextInput>(0)->getString()).unwrapOr(0u);
+
+		this->m_groupIDValue = LevelEditorLayer::get()->getNextFreeGroupID(nullptr);
+		this->updateGroupIDLabel();
+	} else
+		SetGroupIDLayer::onNextGroupID1(sender);
+
+	return;
 }

@@ -12,7 +12,7 @@ void HLevelEditorLayer::onModify(auto& self) {
 	return;
 }
 
-int HLevelEditorLayer::getNextFreeGroupID(CCArray* p0) {
+int HLevelEditorLayer::getNextFreeGroupID(CCArray*) {
 	std::array<bool, 10'000u> usedGroups{};
 	#define MARK(group) usedGroups[(group)] = true
 
@@ -20,7 +20,7 @@ int HLevelEditorLayer::getNextFreeGroupID(CCArray* p0) {
 		if (!object)
 			continue;
 		if (object->m_groupCount)
-			for (auto group : *object->m_groups)
+			for (auto group : *(object->m_groups))
 				MARK(group);
 
 		if (object->m_isTrigger || static_cast<HGameObject*>(object)->m_fields->m_fix) {

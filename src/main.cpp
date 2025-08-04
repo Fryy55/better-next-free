@@ -44,13 +44,17 @@ class $modify(SetGroupIDLayer) {
 
 		auto betterEdit = Loader::get()->getInstalledMod("hjfod.betteredit");
 		bool loadBetterEdit = betterEdit && betterEdit->shouldLoad();
-		if(loadBetterEdit && !self.setHookPriorityBeforePre("SetGroupIDLayer::onNextGroupID1", "hjfod.betteredit"))
+		if (loadBetterEdit && !self.setHookPriorityBeforePre("SetGroupIDLayer::onNextGroupID1", "hjfod.betteredit"))
 			log::warn("Failed to set hook priority for SetGroupIDLayer::onNextGroupID1");
-		log::info(
-			"{}Hook priority for SetGroupIDLayer::onNextGroupID1: {}",
-			loadBetterEdit ? "BetterEdit detected. " : "",
-			self.getHook("SetGroupIDLayer::onNextGroupID1").unwrap()->getPriority()
-		);
+
+		if (auto hook = self.getHook("SetGroupIDLayer::onNextGroupID1"); !hook)
+			log::error("SetGroupIDLayer::onNextGroupID1 hook not found");
+		else
+			log::info(
+				"{}Hook priority for SetGroupIDLayer::onNextGroupID1: {}",
+				loadBetterEdit ? "BetterEdit detected. " : "",
+				hook.unwrap()->getPriority()
+			);
 
 		return;
 	}

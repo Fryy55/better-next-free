@@ -38,7 +38,7 @@ class $modify(SetGroupIDLayer) {
 				offsetInput->getChildByType<TextInput>(0)->getString()
 			).unwrapOr(0u);
 
-			m_groupIDValue = lel->getNextFreeGroupID({});
+			m_groupIDValue = lel->getNextFreeGroupID(gd::unordered_set<int>{});
 			this->updateGroupIDLabel();
 		} else {
 			SetGroupIDLayer::onNextGroupID1(sender);

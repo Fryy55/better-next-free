@@ -12,4 +12,7 @@ class $modify(HLevelEditorLayer, LevelEditorLayer) {
 
 	$override
 	int getNextFreeGroupID(cocos2d::CCArray* p0);
+
+	$override
+	int getNextColorChannel();
 };

@@ -1,7 +1,5 @@
 #include <Geode/Geode.hpp>
 
-#include "LevelEditorLayer.hpp"
-
 #include <Geode/modify/SetGroupIDLayer.hpp>
 
 using namespace geode::prelude;
@@ -29,16 +27,22 @@ class $modify(SetGroupIDLayer) {
 
 	$override
 	void onNextGroupID1(CCObject* sender) {
-		auto& offset = static_cast<HLevelEditorLayer*>(LevelEditorLayer::get())->m_fields->m_nextFreeOffset;
-		offset = 0u;
+		if (
+			auto offsetInput = m_mainLayer
+								->getChildByID("next-free-menu")
+								->getChildByID("hjfod.betteredit/next-free-offset-input")
+		) { // if BE
+			auto lel = LevelEditorLayer::get();
 
-		if (auto offsetInput = this->m_mainLayer->getChildByID("next-free-menu")->getChildByID("hjfod.betteredit/next-free-offset-input")) {
-			offset = numFromString<std::uint16_t>(offsetInput->getChildByType<TextInput>(0)->getString(), 10).unwrapOr(0u);
+			lel->m_levelSettings->m_nextFreeID = numFromString<std::uint16_t>(
+				offsetInput->getChildByType<TextInput>(0)->getString()
+			).unwrapOr(0u);
 
-			m_groupIDValue = LevelEditorLayer::get()->getNextFreeGroupID({});
+			m_groupIDValue = lel->getNextFreeGroupID({});
 			this->updateGroupIDLabel();
-		} else
+		} else {
 			SetGroupIDLayer::onNextGroupID1(sender);
+		}
 
 		return;
 	}

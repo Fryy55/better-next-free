@@ -9,16 +9,8 @@ void HGameObject::customSetup() {
 	switch (this->m_objectID) {
 		// Keyframe
 		case 3032u: [[fallthrough]];
-		// Teleport Orb
-		case 3027u: [[fallthrough]];
-		// Toggle Orb
-		case 1594u: [[fallthrough]];
-		// Teleport Portal
-		case 2902u: [[fallthrough]];
 		// Checkpoint
-		case 2063u: [[fallthrough]];
-		// Toggle Block
-		case 3643u:
+		case 2063u:
 			m_fields->m_fix = true;
 			break;
 

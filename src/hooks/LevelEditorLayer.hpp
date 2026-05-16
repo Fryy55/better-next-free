@@ -11,5 +11,5 @@ class $modify(HLevelEditorLayer, LevelEditorLayer) {
 	static void onModify(auto& self);
 
 	$override
-	int getNextFreeGroupID(cocos2d::CCArray* p0);
+	int getNextFreeGroupID(gd::unordered_set<int> const& exclude);
 };

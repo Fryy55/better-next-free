@@ -12,7 +12,7 @@ void HLevelEditorLayer::onModify(auto& self) {
 	return;
 }
 
-int HLevelEditorLayer::getNextFreeGroupID(CCArray* p0) {
+int HLevelEditorLayer::getNextFreeGroupID(gd::unordered_set<int> const& exclude) {
 	std::array<bool, 10'000u> usedGroups{};
 	#define MARK(group) usedGroups[(group)] = true
 

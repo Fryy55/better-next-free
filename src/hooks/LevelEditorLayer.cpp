@@ -25,9 +25,7 @@ class $modify(LevelEditorLayer) {
 				for (auto group : *object->m_groups)
 					MARK(group);
 
-			if (object->m_isTrigger || static_cast<HGameObject*>(object)->m_fields->m_fix) {
-				auto trigger = static_cast<EffectGameObject*>(object);
-
+			if (auto trigger = typeinfo_cast<EffectGameObject*>(object); trigger || static_cast<HGameObject*>(object)->m_fields->m_fix) {
 				switch (object->m_objectID) {
 					//* Skip standard marks (continue)
 
@@ -127,5 +125,7 @@ class $modify(LevelEditorLayer) {
 		}
 
 		return 0;
+
+		#undef MARK
 	}
 };

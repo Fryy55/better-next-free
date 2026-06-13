@@ -1,3 +1,6 @@
+# 1.0.3
+- Fixed crashes with certain mods when opening the "Edit Group" menu
+
 # 1.0.2
 - Geometry Dash 2.2081 support
     - Note that this release includes _no new features/fixes_ and is just a temporary 2.2081 bump before v1.1.0
